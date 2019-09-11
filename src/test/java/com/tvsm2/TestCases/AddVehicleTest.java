@@ -1,15 +1,12 @@
 package com.tvsm2.TestCases;
 
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import com.tvsm2.Base.TestBaseClass;
 import com.tvsm2.pages.AddVehiclePage;
 import com.tvsm2.pages.AlmostTherePage;
 import com.tvsm2.pages.HomePage;
 import com.tvsm2.pages.SettingsPage;
-import com.tvsm2.pages.StartPage;
 import com.tvsm2.pages.VehicleInformationPage;
 
 public class AddVehicleTest extends TestBaseClass{

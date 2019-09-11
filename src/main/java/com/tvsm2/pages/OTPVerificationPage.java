@@ -17,9 +17,9 @@ public class OTPVerificationPage {
 	AndroidDriver<MobileElement> driver = null;
 	Utils util;
 
-    public OTPVerificationPage(AndroidDriver driver) {
+    public OTPVerificationPage(AndroidDriver<MobileElement> driver) {
     	wait= new WebDriverWait(driver, 15);
-    	this.driver=driver;
+    		this.driver=driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
     

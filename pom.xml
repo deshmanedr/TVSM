@@ -23,7 +23,13 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+
 					<fork>true</fork>
+
+					<systemPropertyVariables>
+						<propertyName>executionENV</propertyName>
+					</systemPropertyVariables>
+
 				</configuration>
 			</plugin>
 			<plugin>
@@ -59,8 +65,6 @@
 			<artifactId>selenium-java</artifactId>
 			<version>3.141.59</version>
 		</dependency>
-
-
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-server</artifactId>
@@ -184,6 +188,12 @@
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>2.6</version>
+		</dependency>
+
+	<dependency>
+			<groupId>org.testobject</groupId>
+			<artifactId>testobject-appium-java-api</artifactId>
+			<version>0.1.0</version>
 		</dependency>
 
 	</dependencies>
