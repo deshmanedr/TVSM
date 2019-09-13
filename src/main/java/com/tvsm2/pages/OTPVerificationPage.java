@@ -1,26 +1,25 @@
 package com.tvsm2.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.tvsm2.utils.Utils;
 
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class OTPVerificationPage {
 	WebDriverWait wait;
-	AndroidDriver<MobileElement> driver = null;
+	WebDriver driver = null;
 	Utils util;
 
-    public OTPVerificationPage(AndroidDriver<MobileElement> driver) {
-    	wait= new WebDriverWait(driver, 15);
-    		this.driver=driver;
-		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+    public OTPVerificationPage(WebDriver driver2) {
+    	wait= new WebDriverWait(driver2, 15);
+    		this.driver=driver2;
+		PageFactory.initElements(new AppiumFieldDecorator(driver2), this);
 	}
     
     @AndroidFindBy(xpath = "//*[@id='otp_one']")

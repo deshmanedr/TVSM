@@ -1,6 +1,7 @@
 package com.tvsm2.utils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -9,20 +10,17 @@ import com.tvsm2.pages.LoginPage;
 import com.tvsm2.pages.OTPVerificationPage;
 import com.tvsm2.pages.UpdatePage;
 
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
-
 public class Utils {
-	 public AndroidDriver<MobileElement> driver;
+	 public WebDriver driver;
 	 UpdatePage update;
 		StartPage homePage;
 		LoginPage loginPage;
 		OTPVerificationPage otpPage; 
 		WebDriverWait wait;
 	 
-	public Utils(AndroidDriver<MobileElement> driver) {
-		 this.driver=driver;
-		 wait = new WebDriverWait(driver,15);
+	public Utils(WebDriver driver2) {
+		 this.driver=driver2;
+		 wait = new WebDriverWait(driver2,15);
 	 }
 	 
 	public String getOTP() throws InterruptedException{

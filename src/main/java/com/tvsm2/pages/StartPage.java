@@ -1,26 +1,23 @@
 package com.tvsm2.pages;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class StartPage {
 	  WebDriverWait wait;
-	  AndroidDriver<MobileElement> driver = null;
+	  WebDriver driver = null;
 
 	
-	public StartPage(AndroidDriver<MobileElement> driver) {
-		wait= new WebDriverWait(driver, 15);
-		this.driver=driver;
-		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+	public StartPage(WebDriver driver2) {
+		wait= new WebDriverWait(driver2, 15);
+		this.driver=driver2;
+		PageFactory.initElements(new AppiumFieldDecorator(driver2), this);
 	}
 
 	@AndroidFindBy(xpath = "//*[@text='LOGIN']")
