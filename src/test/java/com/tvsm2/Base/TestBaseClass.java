@@ -62,12 +62,12 @@ public class TestBaseClass  {
 		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/MyOwnReport.html");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
-		extent.setSystemInfo("OS", "Mac Sierra");
-		extent.setSystemInfo("Host Name", "Krishna");
+		//extent.setSystemInfo("OS", "Mac Sierra");
+		//extent.setSystemInfo("Host Name", "Krishna");
 		extent.setSystemInfo("Environment", "QA");
-		extent.setSystemInfo("User Name", "Krishna Sakinala");
-		htmlReporter.config().setDocumentTitle("Guru99 Bank Report");
-		htmlReporter.config().setReportName("My Own Report");
+	//	extent.setSystemInfo("User Name", "Dinesh Deshmane");
+		htmlReporter.config().setDocumentTitle("TVS MDT sample report");
+		htmlReporter.config().setReportName("TVS MDT");
 
 	}
 	
