@@ -48,6 +48,12 @@
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-report-plugin</artifactId>
+						<version>3.0.0-M3</version>
+					</plugin>
 				</configuration>
 
 			</plugin>
@@ -111,7 +117,7 @@
 			<version>1.6.2</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
 		<dependency>
 			<groupId>com.aventstack</groupId>
@@ -126,12 +132,11 @@
 			<version>2.6</version>
 		</dependency>
 
-<!-- 		<dependency>
+		<dependency>
 			<groupId>org.testobject</groupId>
 			<artifactId>testobject-appium-java-api</artifactId>
 			<version>0.1.0</version>
 		</dependency>
-		 -->
 
 	</dependencies>
 </project>

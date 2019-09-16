@@ -40,14 +40,14 @@ public class Utils {
 	}
 
 
-	public static String getScreenshot( WebDriver driver, String testCaseName)
+	public static String getScreenshot( WebDriver driver)
 		{
 			TakesScreenshot ts=(TakesScreenshot) driver;
 			
 			File src=ts.getScreenshotAs(OutputType.FILE);
 			
-//			String path=System.getProperty("user.dir")+"/Screenshot/"+System.currentTimeMillis()+".png";
-			String path=System.getProperty("user.dir")+"/Screenshot/"+testCaseName+".png";
+			String path=System.getProperty("user.dir")+"/Screenshot/"+System.currentTimeMillis()+".png";
+//			String path=System.getProperty("user.dir")+"/Screenshot/"+testCaseName+".png";
 			File destination=new File(path);
 			
 			try 

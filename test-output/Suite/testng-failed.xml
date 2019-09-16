@@ -7,7 +7,7 @@
         <methods>
           <include name="delete_vehicle_test"/>
           <include name="run"/>
-          <include name="quit"/>
+          <include name="getResult"/>
           <include name="add_vehicle_test"/>
           <include name="logout"/>
         </methods>
@@ -16,7 +16,7 @@
         <methods>
           <include name="Login_logout_Test"/>
           <include name="run"/>
-          <include name="quit"/>
+          <include name="getResult"/>
         </methods>
       </class> <!-- com.tvsm2.TestCases.LoginTest -->
     </classes>

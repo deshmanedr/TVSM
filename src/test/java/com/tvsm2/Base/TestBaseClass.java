@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -31,8 +32,8 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class TestBaseClass  {
-//	public AndroidDriver<MobileElement> driver;
-	public AppiumDriver<MobileElement> driver;
+	public AndroidDriver<MobileElement> driver;
+//	public AppiumDriver<MobileElement> driver;
 	DesiredCapabilities caps;
 	HomePage hp;
 	UpdatePage update;
@@ -53,10 +54,30 @@ public class TestBaseClass  {
 	public static final String ACCESS_KEY = "94ccf993-6974-4232-ae42-637c5287a986";
 	public static final String URL = "https://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:443/wd/hub";
 
+	
+	
+	
+	@BeforeSuite
+	public void initExtent() {
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/MyOwnReport.html");
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+		extent.setSystemInfo("OS", "Mac Sierra");
+		extent.setSystemInfo("Host Name", "Krishna");
+		extent.setSystemInfo("Environment", "QA");
+		extent.setSystemInfo("User Name", "Krishna Sakinala");
+		htmlReporter.config().setDocumentTitle("Guru99 Bank Report");
+		htmlReporter.config().setReportName("My Own Report");
+
+	}
+	
+	
 	@BeforeMethod
 	public void run() throws MalformedURLException {
 
-		if (env == "remote") {
+//		if (env == "remote") {
+		
+		
 //			// for emulator
 //			caps = DesiredCapabilities.android();
 //			caps.setCapability("name", "TVSM Sample Test");
@@ -94,7 +115,7 @@ public class TestBaseClass  {
 			
 			
 		
-		} else {
+	/*	} else {
 			caps = new DesiredCapabilities();
 			caps.setCapability("BROWSER_NAME", "Android");
 			caps.setCapability("VERSION", "8.1.0");
@@ -106,13 +127,13 @@ public class TestBaseClass  {
 			driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-		}
+		}*/
 	}
 
-	@AfterMethod(alwaysRun = true)
+	@AfterMethod
 	public void getResult(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.FAILURE) {
-			String screenShotPath = Utils.getScreenshot(driver, result.getTestName().toString());
+			String screenShotPath = Utils.getScreenshot(driver);
 			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " Test case FAILED due to below issues:",
 					ExtentColor.RED));
 			test.fail(result.getThrowable());

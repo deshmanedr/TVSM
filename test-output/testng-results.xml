@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="2" skipped="1">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-09-13T19:19:10 IST" name="Suite" finished-at="2019-09-13T19:24:17 IST" duration-ms="306837">
+  <suite started-at="2019-09-16T16:42:50 IST" name="Default suite" finished-at="2019-09-16T16:46:49 IST" duration-ms="239035">
     <groups>
     </groups>
-    <test started-at="2019-09-13T19:19:10 IST" name="Test" finished-at="2019-09-13T19:24:17 IST" duration-ms="306837">
+    <test started-at="2019-09-16T16:42:50 IST" name="Default test" finished-at="2019-09-16T16:46:49 IST" duration-ms="239035">
       <class name="com.tvsm2.TestCases.LoginTest">
-        <test-method is-config="true" signature="run()[pri:0, instance:com.tvsm2.TestCases.LoginTest@477b4cdf]" started-at="2019-09-13T19:19:10 IST" name="run" finished-at="2019-09-13T19:21:28 IST" duration-ms="137996" status="PASS">
+        <test-method is-config="true" signature="initExtent()[pri:0, instance:com.tvsm2.TestCases.LoginTest@5c86a017]" started-at="2019-09-16T16:42:49 IST" name="initExtent" finished-at="2019-09-16T16:42:50 IST" duration-ms="1808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initExtent -->
+        <test-method is-config="true" signature="run()[pri:0, instance:com.tvsm2.TestCases.LoginTest@5c86a017]" started-at="2019-09-16T16:42:51 IST" name="run" finished-at="2019-09-16T16:44:02 IST" duration-ms="70944" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run -->
-        <test-method signature="Login_logout_Test()[pri:0, instance:com.tvsm2.TestCases.LoginTest@477b4cdf]" started-at="2019-09-13T19:21:28 IST" name="Login_logout_Test" finished-at="2019-09-13T19:22:20 IST" duration-ms="51633" status="FAIL">
+        <test-method signature="Login_logout_Test()[pri:0, instance:com.tvsm2.TestCases.LoginTest@5c86a017]" started-at="2019-09-16T16:44:02 IST" name="Login_logout_Test" finished-at="2019-09-16T16:45:28 IST" duration-ms="86542" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for visibility of Located by By.chained({By.xpath: //*[@id='iv_next']}) (tried for 15 second(s) with 500 milliseconds interval)]]>
@@ -20,9 +24,9 @@
               <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({By.xpath: //*[@id='iv_next']}) (tried for 15 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at com.tvsm2.pages.UpdatePage.GoToHomePage(UpdatePage.java:31)
-at com.tvsm2.Base.TestBaseClass.Login(TestBaseClass.java:116)
-at com.tvsm2.TestCases.LoginTest.Login_logout_Test(LoginTest.java:17)
+at com.tvsm2.pages.UpdatePage.GoToHomePage(UpdatePage.java:33)
+at com.tvsm2.Base.TestBaseClass.Login(TestBaseClass.java:164)
+at com.tvsm2.TestCases.LoginTest.Login_logout_Test(LoginTest.java:18)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -61,7 +65,7 @@ at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions
 at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 ... 31 more
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@4a325eb9 (tried for 1 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@3ae0b770 (tried for 1 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
@@ -93,228 +97,18 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login_logout_Test -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:com.tvsm2.TestCases.LoginTest@477b4cdf]" started-at="2019-09-13T19:22:20 IST" name="quit" finished-at="2019-09-13T19:22:21 IST" duration-ms="796" status="PASS">
+        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.tvsm2.TestCases.LoginTest@5c86a017]" started-at="2019-09-16T16:45:28 IST" name="getResult" finished-at="2019-09-16T16:46:49 IST" duration-ms="81313" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Login_logout_Test status=FAILURE method=LoginTest.Login_logout_Test()[pri:0, instance:com.tvsm2.TestCases.LoginTest@5c86a017] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quit -->
+        </test-method> <!-- getResult -->
       </class> <!-- com.tvsm2.TestCases.LoginTest -->
-      <class name="com.tvsm2.TestCases.AddVehicleTest">
-        <test-method is-config="true" signature="run()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@77c2494c]" started-at="2019-09-13T19:22:21 IST" name="run" finished-at="2019-09-13T19:23:11 IST" duration-ms="50754" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- run -->
-        <test-method signature="add_vehicle_test()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@77c2494c]" started-at="2019-09-13T19:23:11 IST" name="add_vehicle_test" finished-at="2019-09-13T19:24:15 IST" duration-ms="63700" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Located by By.chained({By.xpath: //*[@id='iv_next']}) (tried for 15 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({By.xpath: //*[@id='iv_next']}) (tried for 15 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at com.tvsm2.pages.UpdatePage.GoToHomePage(UpdatePage.java:31)
-at com.tvsm2.Base.TestBaseClass.Login(TestBaseClass.java:116)
-at com.tvsm2.TestCases.AddVehicleTest.add_vehicle_test(AddVehicleTest.java:23)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.xpath: //*[@id='iv_next']})
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
-at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$c0b591f0.isDisplayed(<generated>)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 31 more
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@66434cc8 (tried for 1 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
-... 38 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //*[@id='iv_next']})
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'EEEPC0160', ip: '172.16.10.67', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '12.0.2'
-Driver info: driver.version: AndroidDriver
-at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-... 40 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- add_vehicle_test -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@77c2494c]" started-at="2019-09-13T19:24:15 IST" name="logout" finished-at="2019-09-13T19:24:17 IST" duration-ms="1594" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'EEEPC0160', ip: '172.16.10.67', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '12.0.2'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {adbPort: 15022, appActivity: com.tvsm.connect.SplashActi..., appPackage: com.tvsm.connect, appiumVersion: 1.14.0, autoGrantPermissions: true, cacheId: 16d2a5ccd7a, chromedriverChromeMappingFile: /root/.testobject_devices/w..., chromedriverExecutableDir: /root/.testobject_devices/w..., chromedriverPorts: [[26220, 26230]], databaseEnabled: false, desired: {adbPort: 15022, appActivity: com.tvsm.connect.SplashActi..., appPackage: com.tvsm.connect, appiumVersion: 1.14.0, autoGrantPermissions: true, cacheId: 16d2a5ccd7a, chromedriverChromeMappingFile: /root/.testobject_devices/w..., chromedriverExecutableDir: /root/.testobject_devices/w..., chromedriverPorts: [[26220, 26230]], deviceName: Motorola_Moto_G6_free, deviceOrientation: portrait, name: TVSM Sample Test, noReset: false, platform: ANDROID, platformName: Android, suppressKillServer: true, systemPort: 8222, testobject_api_key: 083D5A39FAD945F5800713594D0..., testobject_app_id: 1, testobject_appium_version: 1.14.0, testobject_device: Motorola_Moto_G6_free, testobject_platform_name: Android, testobject_test_name: TVSM Sample Test, usedCachedDevice: true, version: }, deviceApiLevel: 26, deviceContextId: ff32d06d-f8ee-4540-bfba-661..., deviceManufacturer: motorola, deviceModel: moto g(6), deviceName: 127.0.0.1:16001, deviceOrientation: portrait, deviceScreenDensity: 480, deviceScreenSize: 1080x2160, deviceUDID: 127.0.0.1:16001, javascriptEnabled: true, locationContextEnabled: false, name: TVSM Sample Test, networkConnectionEnabled: true, noReset: false, pixelRatio: 3, platform: ANDROID, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, suppressKillServer: true, systemPort: 8222, takesScreenshot: true, testobject_api_key: 083D5A39FAD945F5800713594D0..., testobject_app_id: 1, testobject_appium_version: 1.14.0, testobject_device: Motorola_Moto_G6_free, testobject_device_name: Motorola Moto G6, testobject_device_session_id: f67ccae0-0a31-40b0-8e3a-76c..., testobject_platform_name: Android, testobject_project_id: tvs-connect, testobject_test_live_view_url: https://app.testobject.com/..., testobject_test_name: TVSM Sample Test, testobject_test_report_api_url: https://app.testobject.com/..., testobject_test_report_id: 6, testobject_test_report_url: https://app.testobject.com/..., testobject_user_id: deshmanedr, usedCachedDevice: true, version: , viewportRect: {height: 1944, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 5dcf1c8d-83df-4822-82b5-f6b7daf7bc5e
-*** Element info: {Using=xpath, value=//*[@id='imgBack']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'EEEPC0160', ip: '172.16.10.67', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '12.0.2'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {adbPort: 15022, appActivity: com.tvsm.connect.SplashActi..., appPackage: com.tvsm.connect, appiumVersion: 1.14.0, autoGrantPermissions: true, cacheId: 16d2a5ccd7a, chromedriverChromeMappingFile: /root/.testobject_devices/w..., chromedriverExecutableDir: /root/.testobject_devices/w..., chromedriverPorts: [[26220, 26230]], databaseEnabled: false, desired: {adbPort: 15022, appActivity: com.tvsm.connect.SplashActi..., appPackage: com.tvsm.connect, appiumVersion: 1.14.0, autoGrantPermissions: true, cacheId: 16d2a5ccd7a, chromedriverChromeMappingFile: /root/.testobject_devices/w..., chromedriverExecutableDir: /root/.testobject_devices/w..., chromedriverPorts: [[26220, 26230]], deviceName: Motorola_Moto_G6_free, deviceOrientation: portrait, name: TVSM Sample Test, noReset: false, platform: ANDROID, platformName: Android, suppressKillServer: true, systemPort: 8222, testobject_api_key: 083D5A39FAD945F5800713594D0..., testobject_app_id: 1, testobject_appium_version: 1.14.0, testobject_device: Motorola_Moto_G6_free, testobject_platform_name: Android, testobject_test_name: TVSM Sample Test, usedCachedDevice: true, version: }, deviceApiLevel: 26, deviceContextId: ff32d06d-f8ee-4540-bfba-661..., deviceManufacturer: motorola, deviceModel: moto g(6), deviceName: 127.0.0.1:16001, deviceOrientation: portrait, deviceScreenDensity: 480, deviceScreenSize: 1080x2160, deviceUDID: 127.0.0.1:16001, javascriptEnabled: true, locationContextEnabled: false, name: TVSM Sample Test, networkConnectionEnabled: true, noReset: false, pixelRatio: 3, platform: ANDROID, platformName: Android, platformVersion: 8.0.0, statBarHeight: 72, suppressKillServer: true, systemPort: 8222, takesScreenshot: true, testobject_api_key: 083D5A39FAD945F5800713594D0..., testobject_app_id: 1, testobject_appium_version: 1.14.0, testobject_device: Motorola_Moto_G6_free, testobject_device_name: Motorola Moto G6, testobject_device_session_id: f67ccae0-0a31-40b0-8e3a-76c..., testobject_platform_name: Android, testobject_project_id: tvs-connect, testobject_test_live_view_url: https://app.testobject.com/..., testobject_test_name: TVSM Sample Test, testobject_test_report_api_url: https://app.testobject.com/..., testobject_test_report_id: 6, testobject_test_report_url: https://app.testobject.com/..., testobject_user_id: deshmanedr, usedCachedDevice: true, version: , viewportRect: {height: 1944, left: 0, top: 72, width: 1080}, warnings: {}, webStorageEnabled: false}
-Session ID: 5dcf1c8d-83df-4822-82b5-f6b7daf7bc5e
-*** Element info: {Using=xpath, value=//*[@id='imgBack']}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
-at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
-at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-at com.tvsm2.Base.TestBaseClass.Logout(TestBaseClass.java:128)
-at com.tvsm2.TestCases.AddVehicleTest.logout(AddVehicleTest.java:46)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
-at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:683)
-at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:658)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:642)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@77c2494c]" started-at="2019-09-13T19:24:17 IST" name="quit" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1568382857083" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-        <test-method signature="delete_vehicle_test()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@77c2494c]" started-at="2019-09-13T19:24:17 IST" name="delete_vehicle_test" finished-at="2019-09-13T19:24:17 IST" depends-on-methods="com.tvsm2.TestCases.AddVehicleTest.add_vehicle_test" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method AddVehicleTest.delete_vehicle_test()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@77c2494c] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method AddVehicleTest.delete_vehicle_test()[pri:0, instance:com.tvsm2.TestCases.AddVehicleTest@77c2494c] depends on not successfully finished methods
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- delete_vehicle_test -->
-      </class> <!-- com.tvsm2.TestCases.AddVehicleTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
