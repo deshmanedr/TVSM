@@ -14,6 +14,7 @@ public class LoginTest extends TestBaseClass {
 
 	@Test
 	public void Login_logout_Test() throws InterruptedException {
+		test = extent.createTest("Login Test");
 	     Login();
 	     Logout();
 	     Assert.assertTrue(true);

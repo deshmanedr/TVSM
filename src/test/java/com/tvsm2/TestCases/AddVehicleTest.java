@@ -20,6 +20,8 @@ public class AddVehicleTest extends TestBaseClass{
 	@Test
 	public void add_vehicle_test() throws InterruptedException {
 		initialiseObjects();
+		test = extent.createTest("add_vehicle_test");
+
 		Login();
 		//homePage.selectAddedVehicle();
 		homePage.selectAddVehicle();
@@ -32,6 +34,7 @@ public class AddVehicleTest extends TestBaseClass{
 	@Test(dependsOnMethods="add_vehicle_test")
 	public void delete_vehicle_test() throws InterruptedException {
 		initialiseObjects();
+		test = extent.createTest("deelte_vehicle_test");
 		Login();
 		homePage.selectLastAddedVehicle();
 		homePage.selectSettings();

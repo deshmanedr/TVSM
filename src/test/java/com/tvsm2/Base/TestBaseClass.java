@@ -1,5 +1,6 @@
 package com.tvsm2.Base;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -8,13 +9,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.tvsm2.pages.HomePage;
 import com.tvsm2.pages.LoginPage;
 import com.tvsm2.pages.OTPVerificationPage;
 import com.tvsm2.pages.StartPage;
 import com.tvsm2.pages.UpdatePage;
+import com.tvsm2.utils.Utils;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -32,6 +42,9 @@ public class TestBaseClass  {
 	WebDriverWait wait;
 	String env = System.getProperty("executionENV");
 
+	public static ExtentHtmlReporter htmlReporter;
+	public static ExtentReports extent;
+	public static ExtentTest test;
 	/**
 	 * In this section, we will configure our SauceLabs credentials in order to run
 	 * our tests on saucelabs.com
@@ -76,11 +89,11 @@ public class TestBaseClass  {
 			caps.setCapability("noReset", "false");  
 			caps.setCapability("cacheId", "16d2a5ccd7a");   			// your cache ID
 			caps.setCapability("testobject_app_id", "1");  				// your application id which you uploaded to sauce cloud manually 
-//		    caps.setCapability("autoGrantPermissions", true);
+		    caps.setCapability("autoGrantPermissions", true);
 			driver = new AndroidDriver<>(new URL(URL), caps);
 			
 			
-			
+		
 		} else {
 			caps = new DesiredCapabilities();
 			caps.setCapability("BROWSER_NAME", "Android");
@@ -96,8 +109,22 @@ public class TestBaseClass  {
 		}
 	}
 
-	@AfterMethod
-	public void quit() {
+	@AfterMethod(alwaysRun = true)
+	public void getResult(ITestResult result) throws IOException {
+		if (result.getStatus() == ITestResult.FAILURE) {
+			String screenShotPath = Utils.getScreenshot(driver, result.getTestName().toString());
+			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " Test case FAILED due to below issues:",
+					ExtentColor.RED));
+			test.fail(result.getThrowable());
+			test.fail("Snapshot below: " + test.addScreenCaptureFromPath(screenShotPath));
+		} else if (result.getStatus() == ITestResult.SUCCESS) {
+			test.log(Status.PASS, MarkupHelper.createLabel(result.getName() + " Test Case PASSED", ExtentColor.GREEN));
+		} else {
+			test.log(Status.SKIP,
+					MarkupHelper.createLabel(result.getName() + " Test Case SKIPPED", ExtentColor.ORANGE));
+			test.skip(result.getThrowable());
+		}
+		extent.flush();
 		driver.quit();
 	}
 
@@ -133,5 +160,7 @@ public class TestBaseClass  {
 		driver.findElement(By.xpath("//*[@text='YES']")).click();
 	}
 
-
+	public AndroidDriver<MobileElement> getDriver() {
+		return (AndroidDriver<MobileElement>) this.driver;
+	}
 }
